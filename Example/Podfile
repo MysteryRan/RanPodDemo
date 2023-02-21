@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'RanPodDemo_Example' do
+  pod 'RanPodDemo', :path => '../'
+
+  target 'RanPodDemo_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
