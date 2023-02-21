@@ -39,9 +39,9 @@
 /* Begin PBXFileReference section */
 		061C4C4A061F8D4BF9B0C790 /* Pods_RanPodDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanPodDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D72F3ADFA25E34A2CCCF63 /* Pods-RanPodDemo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanPodDemo_Example.release.xcconfig"; path = "Target Support Files/Pods-RanPodDemo_Example/Pods-RanPodDemo_Example.release.xcconfig"; sourceTree = "<group>"; };
-		28E2480494ADF8D258597AFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		28E2480494ADF8D258597AFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2A19B40401CF74CF9B2836B5 /* Pods-RanPodDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanPodDemo_Example.debug.xcconfig"; path = "Target Support Files/Pods-RanPodDemo_Example/Pods-RanPodDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		509281E1FFF81920D0655205 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		509281E1FFF81920D0655205 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* RanPodDemo_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RanPodDemo_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,7 +66,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A1D047CD136FF8C1B5A7B20 /* Pods-RanPodDemo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanPodDemo_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RanPodDemo_Tests/Pods-RanPodDemo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6C008D917C6A77D913B886 /* Pods_RanPodDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanPodDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED755782D9B2AB36B22E812F /* RanPodDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RanPodDemo.podspec; path = ../RanPodDemo.podspec; sourceTree = "<group>"; };
+		ED755782D9B2AB36B22E812F /* RanPodDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RanPodDemo.podspec; path = ../RanPodDemo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				8A1D047CD136FF8C1B5A7B20 /* Pods-RanPodDemo_Tests.debug.xcconfig */,
 				83F42139660DE6668578490D /* Pods-RanPodDemo_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ran;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = YVY2N58XVD;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -494,13 +497,25 @@
 			baseConfigurationReference = 2A19B40401CF74CF9B2836B5 /* Pods-RanPodDemo_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YVY2N58XVD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RanPodDemo/RanPodDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RanPodDemo/RanPodDemo.framework/Headers\"",
+					"\"$(SRCROOT)/../RanPodDemo/Classes/FFmpeg-iOS/include\"",
+					"\"$(SRCROOT)/../RanPodDemo/Classes/libyuv/include\"",
+				);
 				INFOPLIST_FILE = "RanPodDemo/RanPodDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../RanPodDemo/Classes/FFmpeg-iOS/lib\"",
+					"\"$(SRCROOT)/../RanPodDemo/Classes/libyuv\"",
+				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.testVideoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -510,13 +525,25 @@
 			baseConfigurationReference = 10D72F3ADFA25E34A2CCCF63 /* Pods-RanPodDemo_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YVY2N58XVD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RanPodDemo/RanPodDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RanPodDemo/RanPodDemo.framework/Headers\"",
+					"\"$(SRCROOT)/../RanPodDemo/Classes/FFmpeg-iOS/include\"",
+					"\"$(SRCROOT)/../RanPodDemo/Classes/libyuv/include\"",
+				);
 				INFOPLIST_FILE = "RanPodDemo/RanPodDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../RanPodDemo/Classes/FFmpeg-iOS/lib\"",
+					"\"$(SRCROOT)/../RanPodDemo/Classes/libyuv\"",
+				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.testVideoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

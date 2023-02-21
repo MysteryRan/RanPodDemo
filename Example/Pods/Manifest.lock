@@ -1,0 +1,16 @@
+PODS:
+  - RanPodDemo (0.1.0)
+
+DEPENDENCIES:
+  - RanPodDemo (from `../`)
+
+EXTERNAL SOURCES:
+  RanPodDemo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RanPodDemo: 44cad9898874d9efa4bfbb663b720b1645bf1506
+
+PODFILE CHECKSUM: 656be3c59ffc6d9672581a62028a6e644e4bf687
+
+COCOAPODS: 1.10.1

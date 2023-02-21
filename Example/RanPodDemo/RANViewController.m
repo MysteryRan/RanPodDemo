@@ -8,6 +8,41 @@
 
 #import "RANViewController.h"
 
+// FFmpeg Header File
+#ifdef __cplusplus
+extern "C" {
+#endif
+    
+#include "libavformat/avformat.h"
+#include "libavcodec/avcodec.h"
+#include "libavutil/avutil.h"
+#include "libswscale/swscale.h"
+#include "libswresample/swresample.h"
+#include "libavutil/opt.h"
+#include <libavutil/mathematics.h>
+#include <libavutil/time.h>
+#include <libavformat/avformat.h>
+#include <libavutil/pixdesc.h>
+#include "libavutil/timestamp.h"
+//#include "libavformat/avformat.h"
+//#include "libavcodec/avcodec.h"
+#include <libavfilter/buffersink.h>
+#include <libavfilter/buffersrc.h>
+#include <libavutil/opt.h>
+#include <libavutil/channel_layout.h>
+
+//#include <libavutil/channel_layout.h>
+#include <libavutil/common.h>
+#include <libavutil/frame.h>
+#include <libavutil/samplefmt.h>
+
+
+//#include <channel_layout.h>
+    
+#ifdef __cplusplus
+};
+#endif
+
 @interface RANViewController ()
 
 @end

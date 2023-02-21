@@ -1,0 +1,6 @@
+framework module RanPodDemo {
+  umbrella header "RanPodDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
