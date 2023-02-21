@@ -30,13 +30,13 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-#  s.source_files = 'RanPodDemo/Classes/**/*'
+  s.source_files = 'RanPodDemo/Classes/**/*'
   
-  s.subspec 'FFmpeg-iOS' do |ss|
-    ss.vendored_libraries = 'RanPodDemo/Classes/FFmpeg-iOS/lib/*.a'
-    ss.source_files = 'RanPodDemo/Classes/FFmpeg-iOS/include/libavcodec/*.h'
-    end
-  end
+#  s.subspec 'FFmpeg-iOS' do |ss|
+#    ss.vendored_libraries = 'RanPodDemo/Classes/FFmpeg-iOS/lib/*.a'
+#    ss.source_files = 'RanPodDemo/Classes/FFmpeg-iOS/include/libavcodec/*.h'
+#    end
+#  end
 
 #  s.subspec 'libyuv' do |ss|
 #    ss.source_files = 'RanPodDemo/libyuv/*.a'
