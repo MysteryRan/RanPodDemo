@@ -35,14 +35,15 @@ TODO: Add long description of the pod here.
   s.subspec 'FFmpeg-iOS' do |ss|
     ss.vendored_libraries = 'RanPodDemo/Classes/FFmpeg-iOS/lib/*.a'
     ss.source_files = 'RanPodDemo/Classes/FFmpeg-iOS/include/libavcodec/*.h'
-  end
-
-  s.subspec 'libyuv' do |ss|
-    ss.source_files = 'RanPodDemo/libyuv/*.a'
-    ss.subspec 'libavcodec' do |sss|
-       sss.public_header_files = 'RanPodDemo/Classes/include/libavcodec/*.h'
     end
   end
+
+#  s.subspec 'libyuv' do |ss|
+#    ss.source_files = 'RanPodDemo/libyuv/*.a'
+#    ss.subspec 'libavcodec' do |sss|
+#       sss.public_header_files = 'RanPodDemo/Classes/include/libavcodec/*.h'
+#    end
+#  end
   
   # s.resource_bundles = {
   #   'RanPodDemo' => ['RanPodDemo/Assets/*.png']
