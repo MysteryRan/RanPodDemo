@@ -93,6 +93,7 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'AudioToolbox', 'AVFoundation', 'CoreMedia', 'VideoToolbox'
+   s.libraries = 'bz2', 'iconv', 'z'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
