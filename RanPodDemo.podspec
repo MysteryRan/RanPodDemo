@@ -32,24 +32,24 @@ TODO: Add long description of the pod here.
 
   #s.source_files = 'RanPodDemo/Classes/**/*'
   
-#  s.subspec 'FFmpeg-iOS' do |ss|
-#    ss.vendored_libraries = 'RanPodDemo/Classes/FFmpeg-iOS/lib/*.a'
-#    ss.source_files = 'RanPodDemo/Classes/FFmpeg-iOS/include/libavcodec/*.h',
-#    'RanPodDemo/Classes/FFmpeg-iOS/include/libavcodec/*.h',
-#    'RanPodDemo/Classes/FFmpeg-iOS/include/libavdevice/*.h',
-#    'RanPodDemo/Classes/FFmpeg-iOS/include/libavfilter/*.h',
-#    'RanPodDemo/Classes/FFmpeg-iOS/include/libavformat/*.h',
-#    'RanPodDemo/Classes/FFmpeg-iOS/include/libavutil/*.h',
-#    'RanPodDemo/Classes/FFmpeg-iOS/include/libswresample/*.h',
-#    'RanPodDemo/Classes/FFmpeg-iOS/include/libswscale/*.h'
-#  end
+  s.subspec 'FFmpeg-iOS' do |ss|
+    ss.vendored_libraries = 'RanPodDemo/Classes/FFmpeg-iOS/lib/*.a'
+    ss.source_files = 'RanPodDemo/Classes/FFmpeg-iOS/include/libavcodec/*.h',
+    'RanPodDemo/Classes/FFmpeg-iOS/include/libavcodec/*.h',
+    'RanPodDemo/Classes/FFmpeg-iOS/include/libavdevice/*.h',
+    'RanPodDemo/Classes/FFmpeg-iOS/include/libavfilter/*.h',
+    'RanPodDemo/Classes/FFmpeg-iOS/include/libavformat/*.h',
+    'RanPodDemo/Classes/FFmpeg-iOS/include/libavutil/*.h',
+    'RanPodDemo/Classes/FFmpeg-iOS/include/libswresample/*.h',
+    'RanPodDemo/Classes/FFmpeg-iOS/include/libswscale/*.h'
+  end
 
-    s.subspec 'FFmpeg-iOS' do |ss|
-        ss.subspec 'lib' do |sss|
-           sss.vendored_libraries = 'RanPodDemo/Classes/FFmpeg-iOS/lib/*.a'
+#  s.subspec 'FFmpeg-iOS' do |ss|
+#        ss.subspec 'lib' do |sss|
+#           sss.vendored_libraries = 'RanPodDemo/Classes/FFmpeg-iOS/lib/*.a'
 #           sss.source_files = 'DDReaderKernel/Kernel/Headers/*.h'
-        end
-    end
+#        end
+#  end
 
   s.subspec 'libyuv' do |ss|
     ss.source_files = 'RanPodDemo/Classes/libyuv/*.a'
